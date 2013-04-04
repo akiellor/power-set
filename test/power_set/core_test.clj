@@ -4,8 +4,8 @@
 
 (deftest power-set-test
   (testing "empty"
-    (is (= (power-set #{}) [])))
+    (is (= (power-set '()) '())))
   (testing "one"
-    (is (= (power-set #{1}) [[1]])))
+    (is (= (power-set '(1)) '((1)))))
   (testing "two"
-    (is (= (power-set #{1 2}) [[1] [2] [1 2]]))))
+    (is (= (power-set '(1 2)) '((1) (2) (1 2))))))
